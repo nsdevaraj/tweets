@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Embed Tweets Using Twitter widgets.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.0.2.js"></script>
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+  <style id="compiled-css" type="text/css">
+  #tweet {
+    width: 400px !important;
+  }
+ 
+  #tweet iframe {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  </style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    $(window).load(function(){
+	var tweets = jQuery(".tweet");
+	
+	jQuery(tweets).each( function( t, tweet ) { 
+
+    var id = jQuery(this).attr('id');
+ 
+    twttr.widgets.createTweet(
+      id, tweet, 
+      {
+        conversation : 'none',    // or all
+        cards        : 'visible',  // or visible 
+        linkColor    : '#cc0000', // default is blue
+        theme        : 'light'    // or dark
+      });
+
+    });
+
+    });
+
+  //]]></script>
+
+</head>
+<body>
+    <div class="tweet" id="1164462026703245312"></div> 
