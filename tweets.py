@@ -55,6 +55,7 @@ if oldest != -1:
         for listitem in lsorted:
             if listitem.rt > 180: 
                 fp.write('<div class="tweet" id="%s"></div> \n' % listitem.text )
+        fp.write('</body></html>')
         fp.close()
         sys.exit()  
         
