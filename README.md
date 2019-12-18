@@ -34,3 +34,8 @@ https://help.github.com/en/enterprise/2.13/user/articles/configuring-a-publishin
 Now your project is ready, execute "fetch.sh"
 
 It will update your published github page with latest fetched tweets
+
+Edit git config as below to store your repository with credentials (not recommended)
+https://username:pass%40word@github.com/myRepoDir/myRepo.git
+
+I do use https://github.com/termux/termux-widget with alias to fetch.sh stored in $HOME/.shortcuts/ of my android
