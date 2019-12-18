@@ -19,6 +19,7 @@
   #tweet iframe {
     border: none !important;
     box-shadow: none !important;
+	background:black;
   }
   </style>
 
@@ -34,10 +35,10 @@
     twttr.widgets.createTweet(
       id, tweet, 
       {
-        conversation : 'none',    // or all
+        conversation : 'all',    // or all
         cards        : 'visible',  // or visible 
         linkColor    : '#cc0000', // default is blue
-        theme        : 'light'    // or dark
+        theme        : 'dark'    // or dark
       });
 
     });
@@ -47,5 +48,5 @@
   //]]></script>
 
 </head>
-<body>
+<body style="background: black;">
     <div class="tweet" id="1164462026703245312"></div> 
