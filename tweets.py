@@ -40,6 +40,9 @@ oldest = -1
 fp = codecs.open(outfile,"w","utf-8")
 
 
+def write_tweet(text):  
+    api.update_status(status=text)
+
 for listtweet in lists: 
     mentions = api.list_timeline(listtweet.text,listtweet.user, count=200) 
     for tweet in mentions: 
