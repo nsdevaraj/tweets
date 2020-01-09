@@ -92,3 +92,52 @@ fp.close()
 #dic['screen_name'] = list_of_followers
 #outFile = open('Followers.txt','w')
 #json.dump(dic,outFile,indent=4)
+
+
+
+
+
+
+
+
+# get timeline query of users by 100 +list
+#api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, compression=True)
+#lst = [ 
+#
+#]
+#
+#def chunks(lst, n):
+#    """Yield successive n-sized chunks from lst."""
+#    for i in range(0, len(lst), n):
+#        yield lst[i:i + n]
+#l=[]        
+#query = 'powerbi (from:didchris'
+# 
+#max_tweets = 1000
+#x100x = [lst[i:i + 20] for i in range(0, len(lst), 20)]  
+#for ids in x100x:
+#    fq = query
+#    for id in ids:
+#        fq = fq+ ' OR from:'+id
+#    print(fq)    
+#    try:
+#        stuff = api.search(q=fq+')', count=max_tweets) 
+#        #print(query+id+'%29')
+#    except tweepy.TweepError:
+#        print("Skipping..."+id)
+#    for status in stuff:               
+#        twobj = Tweet(status.id_str, status.user.screen_name, status.retweet_count) 
+#        print(status.text)
+#        l.append(twobj)
+#        oldest = status.id 
+#
+#if oldest != -1:
+#    while True:   
+#        lsorted = sorted(l, key=methodcaller('retweets'), reverse=True) 
+#        for listitem in lsorted:
+#           # if listitem.rt > 180: 
+#            fp.write('<div class="tweet" id="%s"></div> \n' % listitem.text )
+#        fp.write('</body></html>')
+#        fp.close()
+#        sys.exit()        
+#fp.close()
